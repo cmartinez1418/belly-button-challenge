@@ -25,17 +25,35 @@ d3.json(url).then(function (data){
 
     console.log(data);
 
-
     let names = data.names;
-    let firstName = names[0]
-    // console.log(names)
+    console.log(names);
+
     let dropdownMenu = d3.select("#selDataSet");
+    
+
+        // let names = data.names;
+        //let firstName = names[0]
+    console.log(names)
+    // let dropdownMenu = d3.select("#selDataSet");
     for (let i=0; i<names.length; i++) {
         dropdownMenu.append("option").text(names[i]).property("value", names[i]);
     // names.forEach((name) => {
     //     dropdownMenu.append("option").text(name).property("value", name)
     // })
-    };
+        }
+
+
+
+    // let names = data.names;
+    // let firstName = names[0]
+    // // console.log(names)
+    // let dropdownMenu = d3.select("#selDataSet");
+    // for (let i=0; i<names.length; i++) {
+    //     dropdownMenu.append("option").text(names[i]).property("value", names[i]);
+    // names.forEach((name) => {
+    //     dropdownMenu.append("option").text(name).property("value", name)
+    // })
+    // };
 
     // barchart
 
@@ -94,12 +112,22 @@ d3.json(url).then(function (data){
     // console.log(firstDemo)
     Object.entries(firstDemo).forEach(([key,value]) => d3.select("#sample-metadata").append("p").text(`${key}: ${value}`));
     
+    
+    // d3.selectAll("selDataSet").on("optionChanged", updatePlotly);
+    // let dropdownMenu = d3.select("#selDataSet");
+    // function updatePlotly() {
 
-
-
-
-
-
+    //     let names = data.;
+    //     //let firstName = names[0]
+    //     console.log(names)
+    //     // let dropdownMenu = d3.select("#selDataSet");
+    //     for (let i=0; i<names.length; i++) {
+    //         dropdownMenu.append("option").text(names[i]).property("value", names[i]);
+    // // names.forEach((name) => {
+    // //     dropdownMenu.append("option").text(name).property("value", name)
+    // // })
+    //     };
+    // };
 
 
 
