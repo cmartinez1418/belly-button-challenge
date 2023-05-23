@@ -1,25 +1,15 @@
 const url = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json";
 
-// const dataPromise = d3.json(url);
-// console.log("Data Promise: ", dataPromise);
 
-// // // Fetch the JSON data and console log it
-// // d3.json(url).then(function(data) {
-// //   console.log(data);
-// // });
+// Fetch the JSON data and console log it
+ d3.json(url).then(function(data) {
+   console.log(data);
+ });
 
-// const dataPromise = d3.json(url)
-// console.log(dataPromise)
+
 
 // getting data for 940 
 
-
-// d3.json(url).then(function (data){
-//     let top_ten = data.samples[0].sample_values.slice(0, 10).reverse();
-//     // console.log(top_ten)
-//     let top_ten_ids = data.samples[0].otu_ids.slice(0, 10).reverse();
-//     // console.log(top_ten_ids)
-//     // let top_ten_labels = 
 
 d3.json(url).then(function (data){
 
@@ -30,30 +20,11 @@ d3.json(url).then(function (data){
 
     let dropdownMenu = d3.select("#selDataSet");
     
-
-        // let names = data.names;
-        //let firstName = names[0]
     console.log(names)
-    // let dropdownMenu = d3.select("#selDataSet");
+    
     for (let i=0; i<names.length; i++) {
         dropdownMenu.append("option").text(names[i]).property("value", names[i]);
-    // names.forEach((name) => {
-    //     dropdownMenu.append("option").text(name).property("value", name)
-    // })
         }
-
-
-
-    // let names = data.names;
-    // let firstName = names[0]
-    // // console.log(names)
-    // let dropdownMenu = d3.select("#selDataSet");
-    // for (let i=0; i<names.length; i++) {
-    //     dropdownMenu.append("option").text(names[i]).property("value", names[i]);
-    // names.forEach((name) => {
-    //     dropdownMenu.append("option").text(name).property("value", name)
-    // })
-    // };
 
     // barchart
 
@@ -109,25 +80,11 @@ d3.json(url).then(function (data){
 
     demoInfo = data.metadata;
     firstDemo = demoInfo[0]
+    
     // console.log(firstDemo)
     Object.entries(firstDemo).forEach(([key,value]) => d3.select("#sample-metadata").append("p").text(`${key}: ${value}`));
     
     
-    // d3.selectAll("selDataSet").on("optionChanged", updatePlotly);
-    // let dropdownMenu = d3.select("#selDataSet");
-    // function updatePlotly() {
-
-    //     let names = data.;
-    //     //let firstName = names[0]
-    //     console.log(names)
-    //     // let dropdownMenu = d3.select("#selDataSet");
-    //     for (let i=0; i<names.length; i++) {
-    //         dropdownMenu.append("option").text(names[i]).property("value", names[i]);
-    // // names.forEach((name) => {
-    // //     dropdownMenu.append("option").text(name).property("value", name)
-    // // })
-    //     };
-    // };
 
 
 
